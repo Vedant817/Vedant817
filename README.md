@@ -15,8 +15,20 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
+<a href="https://dev.to/vedant817" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="vedant817" height="30" width="40" /></a>
 <a href="https://twitter.com/vedant817" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="vedant817" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/vedant mahajan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="vedant mahajan" height="30" width="40" /></a>
+<a href="https://stackoverflow.com/users/vedant mahajan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="vedant mahajan" height="30" width="40" /></a>
+<a href="https://kaggle.com/vedant817" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="vedant817" height="30" width="40" /></a>
+<a href="https://hashnode.com/@vedant817" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hashnode.svg" alt="@vedant817" height="30" width="40" /></a>
+<a href="https://medium.com/@vedantmahajan271" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@vedantmahajan271" height="30" width="40" /></a>
+<a href="https://www.codechef.com/users/vedant817" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/codechef.svg" alt="vedant817" height="30" width="40" /></a>
+<a href="https://www.hackerrank.com/vedantmahajan271" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="vedantmahajan271" height="30" width="40" /></a>
+<a href="https://codeforces.com/profile/vedantmahajan271" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" alt="vedantmahajan271" height="30" width="40" /></a>
+<a href="https://www.leetcode.com/vedant817" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="vedant817" height="30" width="40" /></a>
+<a href="https://www.hackerearth.com/@vedantmahajan271" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerearth.svg" alt="@vedantmahajan271" height="30" width="40" /></a>
 <a href="https://auth.geeksforgeeks.org/user/https://auth.geeksforgeeks.org/user/vedantmah8any/practice/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/geeks-for-geeks.svg" alt="https://auth.geeksforgeeks.org/user/vedantmah8any/practice/" height="30" width="40" /></a>
+<a href="https://discord.gg/Vedant Mahajan#3028" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="Vedant Mahajan#3028" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
