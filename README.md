@@ -2,9 +2,6 @@
 
 <!-- Badges at the top -->
 <p align="center">
-  <a href="https://vedantmahajan.vercel.app/">
-    <img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg" alt="Website shields.io">
-  </a>
   <a href="https://u8views.com/github/Vedant817"><img src="https://u8views.com/api/v1/github/profiles/113882531/views/day-week-month-total-count.svg"></a>
 </p>
 
@@ -23,7 +20,7 @@ Feel free to explore my repositories, contribute to projects, or just say hi!
 
 ## 🔗 Connect with Me
 
-- 🌐 Website: [Vedant]([https://yourwebsite.com](https://vedantmahajan.vercel.app/))
+- 🌐 Website: [Vedant](https://vedantmahajan.vercel.app/)
 - 📫 Email: [vedantmahajan271@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=vedantmahajan271@gmail.com)
 - 💼 LinkedIn: [Vedant Mahajan]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/vedant-mahajan-051b66170/))
 
