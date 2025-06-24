@@ -6,7 +6,7 @@
 </p>
 
 
-## 👋 Welcome!!!
+## 👋 Welcome!
 
 Hey, I'm Vedant — a dynamic developer crafting bold, innovative solutions with code that sparks ideas and ignites collaboration. 🚀 Dive into my repos, join the creative journey, or drop a message to connect! 😎
 
