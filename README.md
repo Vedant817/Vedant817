@@ -14,7 +14,7 @@ Feel free to explore my repositories, contribute to projects, or just say hi!
 
 ## 📈 Contributors Over Time
 
-[![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=Vedant817/Deep-Research-Agent)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=Vedant817/Deep-Research-Agent)
+[![Vedant's Github Activity](https://github-readme-activity-graph.vercel.app/graph?username=Vedant817&bg_color=ffcfe9&color=9e4c98&line=9e4c98&point=403d3d&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 
 
