@@ -51,4 +51,4 @@ Here are a few of my favourite or most active projects:
 
 ### 🔥 GitHub Streak
 
-[![Naereen's github streak](https://github-readme-streak-stats.herokuapp.com/?user=Vedant817\&theme=blue-green)](https://github.com/DenverCoder1/github-readme-streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=Vedant817)](https://git.io/streak-stats)
