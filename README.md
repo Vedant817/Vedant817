@@ -22,12 +22,12 @@ Feel free to explore my repositories, contribute to projects, or just say hi!
 
 - 🌐 Website: [Vedant](https://vedantmahajan.vercel.app/)
 - 📫 Email: [vedantmahajan271@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=vedantmahajan271@gmail.com)
-- 💼 LinkedIn: [Vedant Mahajan]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/vedant-mahajan-051b66170/))
+- 💼 LinkedIn: [Vedant Mahajan](https://www.linkedin.com/in/vedant-mahajan-051b66170/)
 
 
 ## 🚀 Projects to Explore
 
-Here are a few of my favorite or most active projects:
+Here are a few of my favourite or most active projects:
 
 - ⚕️ [MediClarity](https://github.com/Vedant817/MediClarity).
 - 🏢 [Deep Reseach Agent](https://github.com/Vedant817/Deep-Research-Agent)
