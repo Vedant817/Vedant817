@@ -51,4 +51,4 @@ Here are a few of my favourite or most active projects:
 
 ### 🔥 GitHub Streak
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=Vedant817)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=Vedant817&theme=transparent)](https://git.io/streak-stats)
