@@ -5,7 +5,7 @@
   <a href="https://vedantmahajan.vercel.app/">
     <img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg" alt="Website shields.io">
   </a>
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=Vedant817" alt="Profile views" />
+  <a href="https://u8views.com/github/Vedant817"><img src="https://u8views.com/api/v1/github/profiles/113882531/views/day-week-month-total-count.svg"></a>
 </p>
 
 
