@@ -14,7 +14,6 @@
 Hi there! I'm Vedant — a passionate developer who enjoys building things and collaborating with others.  
 Feel free to explore my repositories, contribute to projects, or just say hi!
 
----
 
 ## 📈 Contributors Over Time
 
