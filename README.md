@@ -29,7 +29,7 @@ Hey, I'm Vedant — a dynamic developer crafting bold, innovative solutions with
 Check out some of my most exciting and active creations:
 
 - ⚕️ [MediClarity](https://github.com/Vedant817/MediClarity): Revolutionizing healthcare with crystal-clear solutions.
-- 🏢 [Deep Reseach Agent](https://github.com/Vedant817/Deep-Research-Agent): Unleashing the power of intelligent, in-depth research.
+- 🏢 [Sypher](https://github.com/Vedant817/Deep-Research-Agent): Unleashing the power of intelligent, in-depth research.
 
 
 ## 🛠️ Tech Stack
