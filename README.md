@@ -58,6 +58,18 @@ build → observe → break → debug → improve → automate
 - Treat security, reliability, and observability as product features.
 - Verify before claiming done.
 
+## Small System Things I Notice
+
+```text
+request -> auth -> validate -> queue/cache -> db -> emit event -> observe
+```
+
+- Timeouts, retries, idempotency keys, and backoff are not afterthoughts.
+- Indexes, query plans, connection pools, and cache invalidation decide how calm production feels.
+- Good APIs make invalid states boringly hard to represent.
+- Logs should explain the story without needing a debugger attached.
+- A queue is useful only when failure, replay, ordering, and duplicates are part of the design.
+
 ## Technical Toolbox
 
 <table>
@@ -122,12 +134,6 @@ See SPOTIFY_SETUP.md for secure setup steps.
   <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Vedant817&theme=minimal&hide_border=true&area=true&custom_title=Contribution%20Activity" />
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Vedant817&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Vedant Mahajan GitHub contribution activity graph" />
 </picture>
-
-## Open to Opportunities
-
-Open to Software Engineer, Backend Engineer, Platform/Infrastructure-oriented, early-career/new-grad, and startup engineering roles — especially India-based or remote-friendly teams hiring in India.
-
-Strongest alignment: **Java · Spring Boot · backend APIs · cloud infrastructure · distributed systems · event-driven systems · developer tooling**.
 
 ## Contact
 
