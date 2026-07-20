@@ -14,58 +14,23 @@ reliability, automation, and architecture that can survive the first real user.
 
 </div>
 
-<table>
-<tr>
-<td width="48%" valign="top">
+<div align="center">
 
 <pre>
-+------------------------------------+
-|          VEDANT MAHAJAN            |
-|                                    |
-|            .-::::::-.              |
-|          .:-=+****+=-:.            |
-|         .:-+*########*+-.          |
-|        .:=*##%%@@@@%%##*=.         |
-|        :-*#%%@@@@@@@@%%#*-:        |
-|        -+#%%@@@%%%%@@@%%#+-        |
-|        =*#%%@%#*++*#%@%%#*=        |
-|        =*##%#--====--#%##*=        |
-|        -+#%#  (o)--(o) #%+-        |
-|        .-*%#     __     #%*-.      |
-|          =##\   ----   /##=        |
-|          :*##\  .--.  /##*:        |
-|           :+###-.__.-###+:         |
-|          .-=+##########+=-.        |
-|        .:-==+*#%%%%%%#*+==-:.      |
-|      .:-=++**##%%%%%%##**++=-:.    |
-|     .:-=++**###%%%%%%###**++=-:.   |
-|    .:--==++***########***++==--:.  |
-|                                    |
-|      backend / infra / ai agents   |
-+------------------------------------+
+vedant@github:~$ neofetch
+
+        .----------------.      Vedant Mahajan
+       /  api gateway    \     ------------------------------
+      /--------------------\    Role: Backend-focused Software Engineer
+      |  services  queues  |    Build: APIs, cloud services, dev tools
+      |  cache     events  |    Stack: Java/Spring Boot, Node/TS, Python
+      |  postgres logs    |    Data: PostgreSQL, Redis, Kafka, RabbitMQ
+      \--------------------/    Infra: Docker, Kubernetes, GitHub Actions
+          \  deploy  /         Mode: learning, shipping, debugging
+           `--------'
 </pre>
 
-</td>
-<td width="52%" valign="top">
-
-<pre>
-vedant@github:~$ whoami
-backend-focused software engineer
-
-vedant@github:~$ build_target
-backend APIs · cloud services · AI agents
-
-default_stack:
-  Java/Spring Boot  Node/TS  Python
-  PostgreSQL        Redis    Kafka
-  Docker            K8s      RabbitMQ
-
-status: open_to_backend_platform_roles
-</pre>
-
-</td>
-</tr>
-</table>
+</div>
 
 ## >_ Engineering Snapshot
 
