@@ -16,36 +16,41 @@ reliability, automation, and architecture that can survive the first real user.
 
 <table>
 <tr>
-<td width="42%" valign="top">
+<td width="48%" valign="top">
 
-```text
-                 .-.
-                /   \
-           .---/     \---.
-          /  _  infra  _  \
-         |  (_)  + ai (_)  |
-          \     apis      /
-           `---.     .---'
-                \___/
-             vedant@github
-```
+<pre>
+┌────────────────────────────────────┐
+│          V E D A N T  / /          │
+│                                    │
+│        ██╗   ██╗███╗   ███╗       │
+│        ██║   ██║████╗ ████║       │
+│        ██║   ██║██╔████╔██║       │
+│        ╚██╗ ██╔╝██║╚██╔╝██║       │
+│         ╚████╔╝ ██║ ╚═╝ ██║       │
+│          ╚═══╝  ╚═╝     ╚═╝       │
+│                                    │
+│   backend systems • queues • ai    │
+│   api contracts • infra • logs     │
+└────────────────────────────────────┘
+</pre>
 
 </td>
-<td width="58%" valign="top">
+<td width="52%" valign="top">
 
-```yaml
+<pre>
 vedant@github:~$ whoami
-  backend-focused software engineer
+backend-focused software engineer
 
-vedant@github:~$ building
-  backend APIs · cloud-native services · ai agents · dev tools
+vedant@github:~$ build_target
+backend APIs · cloud services · AI agents
 
-vedant@github:~$ currently-learning
-  system design · observability · kubernetes · event-driven architecture
+default_stack:
+  Java/Spring Boot  Node/TS  Python
+  PostgreSQL        Redis    Kafka
+  Docker            K8s      RabbitMQ
 
-vedant@github:~$ status
-  open to backend, platform, and software engineering opportunities
-```
+status: open_to_backend_platform_roles
+</pre>
 
 </td>
 </tr>
