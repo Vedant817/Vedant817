@@ -1,53 +1,160 @@
-<!-- GitHub Profile README -->
+<div align="center">
 
-<!-- Badges at the top -->
-<p align="center">
-  <a href="https://u8views.com/github/Vedant817"><img src="https://u8views.com/api/v1/github/profiles/113882531/views/day-week-month-total-count.svg"></a>
-</p>
+# Vedant Mahajan
 
+**Backend-focused Software Engineer · Distributed Systems · Cloud Infrastructure · AI Agents**
 
-## 👋 Welcome!
+I build backend systems, developer tools, and AI-enabled workflows with an eye on
+reliability, automation, and architecture that can survive the first real user.
 
-Hey, I'm Vedant — a dynamic developer crafting bold, innovative solutions with code that sparks ideas and ignites collaboration. 🚀 Dive into my repos, join the creative journey, or drop a message to connect! 😎
+[![Portfolio](https://img.shields.io/badge/portfolio-0b1220?style=flat&logo=vercel&logoColor=white)](https://vedantmahajan.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/linkedin-0a66c2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vedant-mahajan-051b66170/)
+[![Email](https://img.shields.io/badge/email-1f6feb?style=flat&logo=gmail&logoColor=white)](mailto:vedantmahajan271@gmail.com)
+[![GitHub](https://img.shields.io/badge/github-161b22?style=flat&logo=github&logoColor=white)](https://github.com/Vedant817)
 
+</div>
 
-## 📈 Contribution Spotlight
+<table>
+<tr>
+<td width="42%" valign="top">
 
-[![Vedant's Github Activity](https://github-readme-activity-graph.vercel.app/graph?username=Vedant817&bg_color=ffcfe9&color=9e4c98&line=9e4c98&point=403d3d&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+```text
+                 .-.
+                /   \
+           .---/     \---.
+          /  _  infra  _  \
+         |  (_)  + ai (_)  |
+          \     apis      /
+           `---.     .---'
+                \___/
+             vedant@github
+```
 
+</td>
+<td width="58%" valign="top">
 
+```yaml
+vedant@github:~$ whoami
+  backend-focused software engineer
 
-## 🔗 Let’s Connect!
+vedant@github:~$ building
+  backend APIs · cloud-native services · ai agents · dev tools
 
-- 🌐 Website: [Vedant](https://vedantmahajan.vercel.app/)
-- 📫 Email: [vedantmahajan271@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=vedantmahajan271@gmail.com)
-- 💼 LinkedIn: [Vedant Mahajan](https://www.linkedin.com/in/vedant-mahajan-051b66170/)
+vedant@github:~$ currently-learning
+  system design · observability · kubernetes · event-driven architecture
 
+vedant@github:~$ status
+  open to backend, platform, and software engineering opportunities
+```
 
-## 🚀 Dive Into My Stellar Projects
+</td>
+</tr>
+</table>
 
-Check out some of my most exciting and active creations:
+## >_ Engineering Snapshot
 
-- ⚕️ [MediClarity](https://github.com/Vedant817/MediClarity): Revolutionizing healthcare with crystal-clear solutions.
-- 🏢 [Sypher](https://github.com/Vedant817/Deep-Research-Agent): Unleashing the power of intelligent, in-depth research.
+I like building systems where the interesting work happens behind the UI: APIs, queues, caches, databases, background jobs, deployment flows, and the failure paths nobody notices until production gets loud.
 
+Current direction: backend and platform engineering with Java/Spring Boot, Node.js/TypeScript, Python, PostgreSQL, Redis, messaging systems, Docker/Kubernetes, and practical AI-agent workflows.
 
-## 🛠️ Tech Stack
+## Current Focus
 
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![YAML](https://img.shields.io/badge/yaml-%23ffffff.svg?style=for-the-badge&logo=yaml&logoColor=151515) ![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white) ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white) ![Expo](https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Web3.js](https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white) ![Zod](https://img.shields.io/badge/zod-%233068b7.svg?style=for-the-badge&logo=zod&logoColor=white) ![Appwrite](https://img.shields.io/badge/Appwrite-%23FD366E.svg?style=for-the-badge&logo=appwrite&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white) ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Brave](https://img.shields.io/badge/Brave-FB542B?style=for-the-badge&logo=Brave&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white) ![OneDrive](https://img.shields.io/badge/OneDrive-0078D4.svg?style=for-the-badge&logo=microsoftonedrive&logoColor=white) ![Proton Drive](https://img.shields.io/badge/Proton%20Drive-6d4aff?style=for-the-badge&logo=proton%20drive&logoColor=white) ![Stripe](https://img.shields.io/badge/Stripe-5469d4?style=for-the-badge&logo=stripe&logoColor=ffffff) ![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white) ![LeetCode](https://img.shields.io/badge/Leetcode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06) ![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white) ![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?style=for-the-badge&logo=Reddit&logoColor=white) ![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=Ethereum&logoColor=white)
+- Designing production-oriented backend services with clear contracts and boringly reliable APIs.
+- Learning distributed-system patterns around retries, idempotency, queues, caching, and consistency.
+- Getting deeper with Kafka/RabbitMQ, Redis, Kubernetes, observability, and secure cloud deployment.
+- Exploring AI agents, retrieval workflows, and developer tools that automate real engineering work.
+- Practising DSA, LLD, and system design for strong SDE/backend interviews.
 
-### 🏆 GitHub Trophies
+## Build Philosophy
 
-[![Naereen's github trophy](https://github-profile-trophy.vercel.app/?username=Vedant817\&row=1)](https://github.com/ryo-ma/github-profile-trophy)
+```text
+build → observe → break → debug → improve → automate
+```
 
-### 📊 GitHub Stats
+- Prefer real workflows over hardcoded demos.
+- Design for failure: retries, timeouts, graceful degradation, and useful logs.
+- Keep architecture understandable before making it clever.
+- Treat security, reliability, and observability as product features.
+- Verify before claiming done.
 
-[![Naereen's github stats](https://github-readme-stats.vercel.app/api?username=Vedant817\&theme=blue-green)](https://github.com/anuraghazra/github-readme-stats)
+## Technical Toolbox
 
-### 🧮 Top Languages
+<table>
+<tr>
+<td valign="top" width="33%">
 
-[![Naereen's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Vedant817\&theme=blue-green)](https://github.com/anuraghazra/github-readme-stats)
+**Backend**
 
-### 🔥 GitHub Streak
+![Backend](https://skillicons.dev/icons?i=java,spring,nodejs,ts,python,fastapi,express&perline=4)
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=Vedant817&theme=transparent)](https://git.io/streak-stats)
+Java · Spring Boot · Node.js · TypeScript · Python · FastAPI · Express.js · REST APIs
+
+</td>
+<td valign="top" width="33%">
+
+**Data + Messaging**
+
+![Data](https://skillicons.dev/icons?i=postgres,mysql,redis,kafka,mongodb&perline=4)
+
+PostgreSQL · MySQL · Redis · Kafka · RabbitMQ · MongoDB · database design
+
+</td>
+<td valign="top" width="33%">
+
+**Infra + Cloud**
+
+![Infra](https://skillicons.dev/icons?i=docker,kubernetes,nginx,githubactions,aws,vercel,linux&perline=4)
+
+Docker · Kubernetes · Nginx · GitHub Actions · AWS · Vercel · Linux
+
+</td>
+</tr>
+</table>
+
+**Engineering interests:** distributed systems · system design · observability · reliability engineering · event-driven architecture · AI agents · developer experience
+
+## Experience Highlights
+
+- Worked across backend, full-stack, automation, and cloud-platform engineering contexts.
+- Built and tested REST APIs, service workflows, CI/CD-integrated checks, and database-backed systems.
+- Worked with cloud-platform and recovery-oriented workflows including health checks, failover thinking, alerts, and operational readiness.
+- Comfortable collaborating with engineering, QA, DevOps, and product teams without exposing private implementation details.
+
+## Notes from the Engineering Rabbit Hole
+
+Writing notes on: idempotent APIs, Kafka delivery semantics, Redis rate limiting, database indexing, Kubernetes probes, distributed locks, retry/backoff strategies, DNS, networking, API reliability, LLD, and system design.
+
+## Current soundtrack
+
+<!--
+Spotify widget setup pending.
+After authentication, insert the configured widget/card URL here.
+See SPOTIFY_SETUP.md for secure setup steps.
+-->
+
+`spotify_status = "setup pending; secrets stay off GitHub"`
+
+## GitHub Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Vedant817&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Vedant817&theme=minimal&hide_border=true&area=true&custom_title=Contribution%20Activity" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Vedant817&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Vedant Mahajan GitHub contribution activity graph" />
+</picture>
+
+## Open to Opportunities
+
+Open to Software Engineer, Backend Engineer, Platform/Infrastructure-oriented, early-career/new-grad, and startup engineering roles — especially India-based or remote-friendly teams hiring in India.
+
+Strongest alignment: **Java · Spring Boot · backend APIs · cloud infrastructure · distributed systems · event-driven systems · developer tooling**.
+
+## Contact
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-vedantmahajan.vercel.app-0b1220?style=flat&logo=vercel&logoColor=white)](https://vedantmahajan.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vedant%20Mahajan-0a66c2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vedant-mahajan-051b66170/)
+[![Email](https://img.shields.io/badge/Email-vedantmahajan271%40gmail.com-1f6feb?style=flat&logo=gmail&logoColor=white)](mailto:vedantmahajan271@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Vedant817-161b22?style=flat&logo=github&logoColor=white)](https://github.com/Vedant817)
+
+```text
+reliability = good defaults + observability + graceful failure
+```
