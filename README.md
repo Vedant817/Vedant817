@@ -17,18 +17,25 @@ reliability, automation, and architecture that can survive the first real user.
 <div align="center">
 
 <pre>
-vedant@github:~$ neofetch
+vedant@github:~$ render --ascii cat.png
 
-        .----------------.      Vedant Mahajan
-       /  api gateway    \     ------------------------------
-      /--------------------\    Role: Backend-focused Software Engineer
-      |  services  queues  |    Build: APIs, cloud services, dev tools
-      |  cache     events  |    Stack: Java/Spring Boot, Node/TS, Python
-      |  postgres logs    |    Data: PostgreSQL, Redis, Kafka, RabbitMQ
-      \--------------------/    Infra: Docker, Kubernetes, GitHub Actions
-          \  deploy  /         Mode: learning, shipping, debugging
-           `--------'
+                    /\             /\
+                   /  \___   ___ /  \
+                  /      _\ /_      \
+                 /  /\  /       \  /\  \
+                |  |  |  o   o  |  |  |
+                |  |  |     ^   |  |  |
+                 \  \  \  \___/  /  / /
+                  \  \__\_______/__ / /
+                   \      _____      /
+                    |    /     \    |
+                    |   |  ___  |   |
+                    |___|_|   |_|___|
+
+        backend systems / queues / caches / logs / deploys
 </pre>
+
+<sub><code>mode: curious systems gremlin · currently debugging distributed things</code></sub>
 
 </div>
 
