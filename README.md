@@ -2,10 +2,10 @@
 
 # Vedant Mahajan
 
-**Backend-focused Software Engineer · Distributed Systems · Cloud Infrastructure · AI Agents**
+**SDE // Backend Systems · Distributed Systems · Cloud Infrastructure · AI Agents**
 
-I turn messy product ideas into APIs, workers, queues, and deployable systems —
-with a bias for boring reliability, useful automation, and debuggable architecture.
+I compile messy product ideas into APIs, workers, queues, and deployable systems —
+with boring reliability, observable failure modes, and architecture another engineer can debug.
 
 [![Portfolio](https://img.shields.io/badge/portfolio-0b1220?style=flat&logo=vercel&logoColor=white)](https://vedantmahajan.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/linkedin-0a66c2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vedant-mahajan-051b66170/)
@@ -24,37 +24,37 @@ with a bias for boring reliability, useful automation, and debuggable architectu
 
 </div>
 
-## >_ Engineering Snapshot
+## `whoami --engineering`
 
-I like the parts of software that usually sit behind the demo: API boundaries, worker queues, cache strategy, schema design, background jobs, deployment scripts, logs, and failure paths.
+I work on the parts of software that keep running after the happy-path demo ends: API boundaries, worker queues, cache strategy, schema design, background jobs, deployment scripts, logs, and failure paths.
 
-Current direction: backend and platform engineering with Java/Spring Boot, Node.js/TypeScript, Python, PostgreSQL, Redis, messaging systems, Docker/Kubernetes, and practical AI-agent workflows.
+Current direction: SDE/backend engineering with Java/Spring Boot, Node.js/TypeScript, Python, PostgreSQL, Redis, messaging systems, Docker/Kubernetes, and practical AI-agent workflows.
 
 ```text
 mental model: product flow -> API contract -> data model -> failure modes -> observability -> deploy
 ```
 
-## Current Focus
+## `active_threads[]`
 
-- Designing production-oriented backend services with clear contracts and boringly reliable APIs.
-- Learning distributed-system patterns around retries, idempotency, queues, caching, and consistency.
-- Getting deeper with Kafka/RabbitMQ, Redis, Kubernetes, observability, and secure cloud deployment.
-- Exploring AI agents, retrieval workflows, and developer tools that automate real engineering work.
-- Practising DSA, LLD, and system design for strong SDE/backend interviews.
+- `[services]` Designing production-oriented backends with explicit contracts and boringly reliable APIs.
+- `[distributed]` Studying retries, idempotency, queues, caching, consistency, and the failure modes between them.
+- `[runtime]` Going deeper with Kafka/RabbitMQ, Redis, Kubernetes, observability, and secure cloud deployment.
+- `[agents]` Building retrieval workflows and developer tools that automate real engineering work.
+- `[interviews]` Practising DSA, LLD, and system design for SDE/backend roles.
 
-## Build Philosophy
+## `operating_principles.yaml`
 
 ```text
 build → observe → break → debug → improve → automate
 ```
 
-- Prefer real workflows over hardcoded demos.
-- Design for failure: retries, timeouts, graceful degradation, and useful logs.
-- Keep architecture understandable before making it clever.
-- Treat security, reliability, and observability as product features.
-- Verify before claiming done.
+- `workflow: real` — wire the actual path instead of hardcoding the demo.
+- `failure_mode: expected` — budget retries, set timeouts, degrade gracefully, and leave useful logs.
+- `complexity_budget: guarded` — keep the architecture legible before making it clever.
+- `non_functionals: first_class` — security, reliability, and observability ship with the feature.
+- `done: verified` — evidence before victory laps.
 
-## System Design Scratchpad
+## `request_path.trace`
 
 ```text
 request -> auth -> validate -> queue/cache -> db -> emit event -> trace/log/metric
@@ -68,7 +68,7 @@ request -> auth -> validate -> queue/cache -> db -> emit event -> trace/log/metr
 | Caches | invalidation, TTLs, stampedes, consistency, fallback paths |
 | Deployments | health checks, rollbacks, config, secrets, observability |
 
-## Technical Toolbox
+## `toolchain.lock`
 
 <table>
 <tr>
@@ -104,14 +104,14 @@ Docker · Kubernetes · Nginx · GitHub Actions · AWS · Vercel · Linux
 
 **Engineering interests:** distributed systems · system design · observability · reliability engineering · event-driven architecture · AI agents · developer experience
 
-## Experience Highlights
+## `shipped_evidence.log`
 
-- Worked across backend, full-stack, automation, and cloud-platform engineering contexts.
-- Built and tested REST APIs, service workflows, CI/CD-integrated checks, and database-backed systems.
-- Worked with cloud-platform and recovery-oriented workflows including health checks, failover thinking, alerts, and operational readiness.
-- Comfortable collaborating with engineering, QA, DevOps, and product teams without exposing private implementation details.
+- Worked across backend, automation, and cloud-platform software engineering contexts.
+- Built and validated REST APIs, service workflows, CI/CD-integrated checks, and database-backed systems.
+- Worked with recovery-oriented flows: health checks, failover thinking, alerts, and operational readiness.
+- Collaborated across software engineering, DevOps, and product boundaries while keeping implementation details appropriately scoped.
 
-## Notes from the Engineering Rabbit Hole
+## `rabbit_hole.log`
 
 Writing notes on: idempotent APIs, Kafka delivery semantics, Redis rate limiting, database indexing, Kubernetes probes, distributed locks, retry/backoff strategies, DNS, networking, API reliability, LLD, and system design.
 
@@ -119,11 +119,11 @@ Writing notes on: idempotent APIs, Kafka delivery semantics, Redis rate limiting
 currently poking at: outbox pattern, backpressure, dead-letter queues, cache stampede control, trace IDs
 ```
 
-## Current soundtrack
+## `now_playing`
 
 [![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=gepo4g5swosa0n0e2qwsvugt0&cover_image=true&theme=spotify-embed&show_offline=false&background_color=121212&interchange=true&profanity=true&hide_remaster=true&mode=dark&bar_color=53b14f&bar_color_cover=true)](https://github.com/kittinan/spotify-github-profile)
 
-## GitHub Activity
+## `commit_stream`
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Vedant817&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" />
@@ -131,12 +131,11 @@ currently poking at: outbox pattern, backpressure, dead-letter queues, cache sta
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Vedant817&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Vedant Mahajan GitHub contribution activity graph" />
 </picture>
 
-## Contact
+## `handshake`
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-vedantmahajan.vercel.app-0b1220?style=flat&logo=vercel&logoColor=white)](https://vedantmahajan.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Vedant%20Mahajan-0a66c2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vedant-mahajan-051b66170/)
 [![Email](https://img.shields.io/badge/Email-vedantmahajan271%40gmail.com-1f6feb?style=flat&logo=gmail&logoColor=white)](mailto:vedantmahajan271@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Vedant817-161b22?style=flat&logo=github&logoColor=white)](https://github.com/Vedant817)
 
 ```text
 reliability = good defaults + observability + graceful failure
