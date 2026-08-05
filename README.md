@@ -10,7 +10,7 @@ with a bias for boring reliability, useful automation, and debuggable architectu
 [![Portfolio](https://img.shields.io/badge/portfolio-0b1220?style=flat&logo=vercel&logoColor=white)](https://vedantmahajan.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/linkedin-0a66c2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vedant-mahajan-051b66170/)
 [![Email](https://img.shields.io/badge/email-1f6feb?style=flat&logo=gmail&logoColor=white)](mailto:vedantmahajan271@gmail.com)
-[![GitHub](https://img.shields.io/badge/github-161b22?style=flat&logo=github&logoColor=white)](https://github.com/Vedant817)
+[![LeetCode](https://img.shields.io/badge/leetcode-FFA116?style=flat&logo=leetcode&logoColor=black)](https://leetcode.com/u/Vedant817/)
 
 </div>
 
