@@ -121,13 +121,7 @@ currently poking at: outbox pattern, backpressure, dead-letter queues, cache sta
 
 ## Current soundtrack
 
-<!--
-Spotify widget setup pending.
-After authentication, insert the configured widget/card URL here.
-See SPOTIFY_SETUP.md for secure setup steps.
--->
-
-`spotify_status = "setup pending; secrets stay off GitHub"`
+[![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=gepo4g5swosa0n0e2qwsvugt0&cover_image=true&theme=spotify-embed&show_offline=false&background_color=121212&interchange=true&profanity=true&hide_remaster=true&mode=dark&bar_color=53b14f&bar_color_cover=true)](https://github.com/kittinan/spotify-github-profile)
 
 ## GitHub Activity
 
