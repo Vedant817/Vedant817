@@ -2,7 +2,7 @@
 
 # Vedant Mahajan
 
-**SDE // Backend Systems · Distributed Systems · Cloud Infrastructure · AI Agents**
+**Backend Systems · Distributed Systems · Cloud Infrastructure · AI Agents**
 
 I compile messy product ideas into APIs, workers, queues, and deployable systems —
 with boring reliability, observable failure modes, and architecture another engineer can debug.
@@ -28,7 +28,7 @@ with boring reliability, observable failure modes, and architecture another engi
 
 I work on the parts of software that keep running after the happy-path demo ends: API boundaries, worker queues, cache strategy, schema design, background jobs, deployment scripts, logs, and failure paths.
 
-Current direction: SDE/backend engineering with Java/Spring Boot, Node.js/TypeScript, Python, PostgreSQL, Redis, messaging systems, Docker/Kubernetes, and practical AI-agent workflows.
+Current direction: Backend engineering with Java/Spring Boot, Node.js/TypeScript, Python, PostgreSQL, Redis, messaging systems, Docker/Kubernetes, and practical AI-agent workflows.
 
 ```text
 mental model: product flow -> API contract -> data model -> failure modes -> observability -> deploy
