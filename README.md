@@ -16,24 +16,9 @@ with a bias for boring reliability, useful automation, and debuggable architectu
 
 <div align="center">
 
-<pre>
-vedant@github:~$ render --ascii cat.png
+<img src="bunny_cropped.png" alt="Pixel art bunny mascot" width="320" />
 
-                    /\             /\
-                   /  \___   ___ /  \
-                  /      _\ /_      \
-                 /  /\  /       \  /\  \
-                |  |  |  o   o  |  |  |
-                |  |  |     ^   |  |  |
-                 \  \  \  \___/  /  / /
-                  \  \__\_______/__ / /
-                   \      _____      /
-                    |    /     \    |
-                    |   |  ___  |   |
-                    |___|_|   |_|___|
-
-        backend systems / queues / caches / logs / deploys
-</pre>
+<p><code>backend systems / queues / caches / logs / deploys</code></p>
 
 <sub><code>mode: curious systems gremlin · logs before vibes · retries with budgets · ship, observe, tighten</code></sub>
 
