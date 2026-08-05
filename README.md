@@ -4,8 +4,8 @@
 
 **Backend-focused Software Engineer · Distributed Systems · Cloud Infrastructure · AI Agents**
 
-I build backend systems, developer tools, and AI-enabled workflows with an eye on
-reliability, automation, and architecture that can survive the first real user.
+I turn messy product ideas into APIs, workers, queues, and deployable systems —
+with a bias for boring reliability, useful automation, and debuggable architecture.
 
 [![Portfolio](https://img.shields.io/badge/portfolio-0b1220?style=flat&logo=vercel&logoColor=white)](https://vedantmahajan.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/linkedin-0a66c2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vedant-mahajan-051b66170/)
@@ -35,15 +35,19 @@ vedant@github:~$ render --ascii cat.png
         backend systems / queues / caches / logs / deploys
 </pre>
 
-<sub><code>mode: curious systems gremlin · currently debugging distributed things</code></sub>
+<sub><code>mode: curious systems gremlin · logs before vibes · retries with budgets · ship, observe, tighten</code></sub>
 
 </div>
 
 ## >_ Engineering Snapshot
 
-I like building systems where the interesting work happens behind the UI: APIs, queues, caches, databases, background jobs, deployment flows, and the failure paths nobody notices until production gets loud.
+I like the parts of software that usually sit behind the demo: API boundaries, worker queues, cache strategy, schema design, background jobs, deployment scripts, logs, and failure paths.
 
 Current direction: backend and platform engineering with Java/Spring Boot, Node.js/TypeScript, Python, PostgreSQL, Redis, messaging systems, Docker/Kubernetes, and practical AI-agent workflows.
+
+```text
+mental model: product flow -> API contract -> data model -> failure modes -> observability -> deploy
+```
 
 ## Current Focus
 
@@ -65,17 +69,19 @@ build → observe → break → debug → improve → automate
 - Treat security, reliability, and observability as product features.
 - Verify before claiming done.
 
-## Small System Things I Notice
+## System Design Scratchpad
 
 ```text
-request -> auth -> validate -> queue/cache -> db -> emit event -> observe
+request -> auth -> validate -> queue/cache -> db -> emit event -> trace/log/metric
 ```
 
-- Timeouts, retries, idempotency keys, and backoff are not afterthoughts.
-- Indexes, query plans, connection pools, and cache invalidation decide how calm production feels.
-- Good APIs make invalid states boringly hard to represent.
-- Logs should explain the story without needing a debugger attached.
-- A queue is useful only when failure, replay, ordering, and duplicates are part of the design.
+| If the system has... | I start asking about... |
+| --- | --- |
+| APIs | contracts, validation, idempotency, versioning, rate limits |
+| Queues | retries, ordering, poison messages, replay, duplicate handling |
+| Databases | indexes, transactions, migrations, connection pools, slow queries |
+| Caches | invalidation, TTLs, stampedes, consistency, fallback paths |
+| Deployments | health checks, rollbacks, config, secrets, observability |
 
 ## Technical Toolbox
 
@@ -123,6 +129,10 @@ Docker · Kubernetes · Nginx · GitHub Actions · AWS · Vercel · Linux
 ## Notes from the Engineering Rabbit Hole
 
 Writing notes on: idempotent APIs, Kafka delivery semantics, Redis rate limiting, database indexing, Kubernetes probes, distributed locks, retry/backoff strategies, DNS, networking, API reliability, LLD, and system design.
+
+```text
+currently poking at: outbox pattern, backpressure, dead-letter queues, cache stampede control, trace IDs
+```
 
 ## Current soundtrack
 
