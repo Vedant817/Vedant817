@@ -125,17 +125,11 @@ currently poking at: outbox pattern, backpressure, dead-letter queues, cache sta
 
 ## `commit_stream`
 
-<div align="center">
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Vedant817/Vedant817/output/contribution-frequency-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Vedant817/Vedant817/output/contribution-frequency.svg" />
-  <img src="https://raw.githubusercontent.com/Vedant817/Vedant817/output/contribution-frequency.svg" alt="Vedant Mahajan weekly GitHub commit and contribution frequency" width="100%" />
+  <img src="https://raw.githubusercontent.com/Vedant817/Vedant817/output/contribution-frequency.svg" alt="Vedant Mahajan GitHub contribution frequency" width="100%" />
 </picture>
-
-<sub><code>52-week activity signal · commits vs all contributions · generated from GitHub data</code></sub>
-
-</div>
 
 ## `handshake`
 
