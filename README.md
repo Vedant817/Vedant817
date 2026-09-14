@@ -125,11 +125,6 @@ currently poking at: outbox pattern, backpressure, dead-letter queues, cache sta
 
 ## `commit_stream`
 
-```text
-$ tail -f ~/.commit_stream.log
-# zero-maintenance mode: no cron, no scripts — numbers render on every view
-```
-
 <div align="center">
 
 <picture>
@@ -159,8 +154,6 @@ $ tail -f ~/.commit_stream.log
 
 </div>
 </details>
-
-<sub><code>src: github api · rendered per view · no workflows harmed</code></sub>
 
 ## `handshake`
 
