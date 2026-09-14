@@ -100,6 +100,74 @@ def aggregate_weekly(days: list[tuple[date, int]], start: date, weeks: int) -> l
     return totals
 
 
+def compute_stats(
+    daily: list[tuple[date, int]],
+    contributions: list[int],
+    week_starts: list[date],
+) -> dict:
+    """Derive recruiter-friendly productivity stats from daily + weekly data."""
+    n = len(contributions)
+    total = sum(contributions)
+    avg_week = (total / n) if n else 0.0
+    best = max(contributions, default=0)
+    best_label = ""
+    if n and best > 0:
+        best_label = week_starts[contributions.index(best)].strftime("%b %d, %Y")
+
+    active_weeks = sum(1 for v in contributions if v > 0)
+    consistency = (100.0 * active_weeks / n) if n else 0.0
+
+    ordered = sorted(daily, key=lambda t: t[0])
+    active_days = sum(1 for _, c in ordered if c > 0)
+
+    longest = 0
+    run = 0
+    for _, c in ordered:
+        if c > 0:
+            run += 1
+            longest = max(longest, run)
+        else:
+            run = 0
+
+    # Current streak ends today; if today is still blank, measure through yesterday
+    # so an in-progress day does not zero out an active streak.
+    current = 0
+    idx = len(ordered) - 1
+    if idx >= 0 and ordered[idx][1] == 0:
+        idx -= 1
+    while idx >= 0 and ordered[idx][1] > 0:
+        current += 1
+        idx -= 1
+
+    last4 = sum(contributions[-4:]) if n else 0
+    prev4 = sum(contributions[-8:-4]) if n >= 8 else 0
+    if prev4 > 0:
+        trend_pct = 100.0 * (last4 - prev4) / prev4
+    elif last4 > 0:
+        trend_pct = 100.0
+    else:
+        trend_pct = 0.0
+
+    above_avg = sum(1 for v in contributions if v > avg_week) if n else 0
+
+    return {
+        "total": total,
+        "avg_week": avg_week,
+        "best": best,
+        "best_label": best_label,
+        "active_weeks": active_weeks,
+        "weeks": n,
+        "consistency": consistency,
+        "active_days": active_days,
+        "longest_streak": longest,
+        "current_streak": current,
+        "last4": last4,
+        "prev4": prev4,
+        "trend_pct": trend_pct,
+        "above_avg": above_avg,
+    }
+
+
 def smooth_path(points: list[tuple[float, float]], tension: float = 0.22) -> str:
     """Return a smooth cubic Bezier path that still passes through every data point."""
     if not points:
@@ -170,20 +238,25 @@ def render_svg(
     user: str,
     contributions: list[int],
     week_starts: list[date] | None = None,
+    daily: list[tuple[date, int]] | None = None,
     dark: bool = False,
 ) -> str:
-    width, height = 1100, 384
-    left, right, top, bottom = 56, 18, 58, 36
+    """Smooth dot-free productivity chart with hover-only details.
+
+    The curve itself never renders permanent point markers — each week owns an
+    invisible hover band that reveals a guide line, a focus ring and a tooltip
+    card only while hovered/focused.
+    """
+    width, height = 1100, 472
+    left, right, top, bottom = 58, 22, 144, 44
     plot_w = width - left - right
     plot_h = height - top - bottom
 
     bg = "#0d1117" if dark else "#ffffff"
     text = "#e6edf3" if dark else "#24292f"
     muted = "#8b949e" if dark else "#57606a"
-    line = "#f0f0f0" if dark else "#24292f"
     grid = "#30363d" if dark else "#d8dee4"
-    fill = "#8b949e" if dark else "#57606a"
-    dot_stroke = "#0d1117" if dark else "#ffffff"
+    accent = "#3fb950" if dark else "#1f883d"
     tip_bg = "#161b22" if dark else "#ffffff"
     tip_border = "#30363d" if dark else "#d0d7de"
 
@@ -198,6 +271,13 @@ def render_svg(
         monday = today - timedelta(days=today.weekday())
         start = monday - timedelta(weeks=max(0, n - 1))
         week_starts = [start + timedelta(weeks=i) for i in range(n)]
+
+    stats = compute_stats(daily or [], contributions, week_starts)
+    total = stats["total"]
+    avg_week = stats["avg_week"]
+    best = stats["best"]
+    best_label = stats["best_label"]
+    safe_user = xml_escape(str(user))
 
     def x(i: int) -> float:
         if n <= 1:
@@ -216,50 +296,98 @@ def render_svg(
     else:
         area = ""
 
-    total = sum(contributions)
-    avg = (total / n) if n else 0.0
-    best = max_value
-    best_label = ""
-    if n and best > 0:
-        best_i = contributions.index(best)
-        best_label = week_starts[best_i].strftime("%b %d, %Y")
-    safe_user = xml_escape(str(user))
+    if n and week_starts:
+        window = f"{week_starts[0].strftime('%b %Y')} - {week_starts[-1].strftime('%b %Y')}"
+    else:
+        window = f"trailing {WEEKS} weeks"
+
+    if stats["prev4"] > 0 or stats["last4"] > 0:
+        pct = stats["trend_pct"]
+        if abs(pct) < 0.5:
+            trend_str = "steady vs prior 4 weeks"
+        elif pct > 0:
+            trend_str = f"+{pct:.0f}% vs prior 4 weeks"
+        else:
+            trend_str = f"{pct:.0f}% vs prior 4 weeks"
+    else:
+        trend_str = "no recent trend"
 
     parts: list[str] = []
     parts.append(
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">'
     )
-    parts.append(f"<title id=\"title\">{safe_user} GitHub contribution frequency</title>")
+    parts.append(f"<title id=\"title\">{safe_user} GitHub contribution activity</title>")
     parts.append(
-        f'<desc id="desc">Weekly GitHub contributions over the trailing {WEEKS} weeks. '
+        f'<desc id="desc">Smooth weekly GitHub contribution curve over {window}. '
         f"Currently {total} contributions in this window.</desc>"
+    )
+    parts.append(
+        "<defs>"
+        f'<linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">'
+        f'<stop offset="0" stop-color="{accent}" stop-opacity="0.30"/>'
+        f'<stop offset="1" stop-color="{accent}" stop-opacity="0.02"/>'
+        "</linearGradient>"
+        "</defs>"
     )
     parts.append(
         "<style>"
         "text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;}"
-        ".pt .tip{opacity:0;transition:opacity .15s ease-in-out;pointer-events:none;}"
-        ".pt:hover .tip,.pt:focus .tip{opacity:1;}"
-        ".pt .halo{opacity:0;transition:opacity .15s ease-in-out;}"
-        ".pt:hover .halo,.pt:focus .halo{opacity:0.28;}"
+        ".pt .tip,.pt .guide,.pt .focus{opacity:0;transition:opacity .15s ease-in-out;}"
+        ".pt:hover .tip,.pt:focus .tip,.pt:hover .guide,.pt:focus .guide,"
+        ".pt:hover .focus,.pt:focus .focus{opacity:1;}"
+        ".pt .tip{pointer-events:none;}"
         ".pt{outline:none;}"
         "</style>"
     )
     parts.append(f'<rect width="{width}" height="{height}" fill="{bg}"/>')
 
-    # Header: visible title + numbered summary so the chart is readable without hover.
+    # ---- Header: title + productivity KPIs (the recruiter-facing story) ----
     parts.append(
-        f'<text x="{left}" y="26" font-size="16" font-weight="600" fill="{text}">'
-        f"Contribution frequency · trailing {n} weeks</text>"
+        f'<text x="{left}" y="32" font-size="17" font-weight="700" fill="{text}">'
+        "Contribution activity</text>"
     )
-    subtitle = f"{total:,} contributions · avg {avg:.1f}/week"
-    if best_label:
-        subtitle += f" · best {best:,} ({xml_escape(best_label)})"
     parts.append(
-        f'<text x="{left}" y="44" font-size="12.5" fill="{muted}">{xml_escape(subtitle)}</text>'
+        f'<text x="{width - right}" y="32" font-size="12" fill="{muted}" text-anchor="end">'
+        f"{xml_escape(window)} · live GitHub data</text>"
     )
 
-    # Y gridlines + numbered tick labels.
+    kpi = [
+        (f"{total:,}", "TOTAL CONTRIBUTIONS"),
+        (f"{avg_week:.1f}/wk", "WEEKLY AVERAGE"),
+        (
+            f"{stats['active_weeks']}/{n} wks",
+            f"ACTIVE WEEKS · {stats['consistency']:.0f}%",
+        ),
+        (
+            f"{stats['current_streak']}d streak",
+            f"DAY STREAK · BEST {stats['longest_streak']}d",
+        ),
+    ]
+    for idx, (value, label) in enumerate(kpi):
+        kx = left + idx * (plot_w / 4)
+        parts.append(
+            f'<text x="{kx:.2f}" y="68" font-size="21" font-weight="800" fill="{text}">'
+            f"{xml_escape(value)}</text>"
+        )
+        parts.append(
+            f'<text x="{kx:.2f}" y="86" font-size="10.5" letter-spacing="1" fill="{muted}">'
+            f"{xml_escape(label)}</text>"
+        )
+
+    insight = (
+        f"Best week {best:,} ({xml_escape(best_label)}) · " if best_label else ""
+    )
+    insight += f"Last 4 weeks {stats['last4']:,} ({trend_str}) · {stats['above_avg']} weeks above average"
+    parts.append(
+        f'<text x="{left}" y="110" font-size="12.5" fill="{muted}">{insight}</text>'
+    )
+    parts.append(
+        f'<line x1="{left}" y1="122" x2="{width - right}" y2="122" '
+        f'stroke="{grid}" stroke-width="1" opacity="0.9"/>'
+    )
+
+    # ---- Axes (numbered, no dots on the curve itself) ----
     for tick in ticks:
         yy = y(tick)
         strong = tick == 0
@@ -276,7 +404,6 @@ def render_svg(
         f'text-anchor="middle" transform="rotate(-90 14 {top + plot_h / 2:.2f})">contributions / week</text>'
     )
 
-    # X month labels (numbered by calendar date, thinned to avoid collisions).
     last_labeled = -10
     for i, ws in enumerate(week_starts):
         label = ""
@@ -289,19 +416,48 @@ def render_svg(
         if label:
             last_labeled = i
             parts.append(
-                f'<text x="{x(i):.2f}" y="{top + plot_h + 21:.2f}" font-size="11.5" '
+                f'<text x="{x(i):.2f}" y="{top + plot_h + 22:.2f}" font-size="11.5" '
                 f'fill="{muted}" text-anchor="middle">{xml_escape(label)}</text>'
             )
 
-    parts.append(
-        f'<path d="{area}" fill="{fill}" opacity="0.17"/>' if area else ""
-    )
-    parts.append(
-        f'<path d="{curve}" fill="none" stroke="{line}" stroke-width="3.5" '
-        f'stroke-linecap="round" stroke-linejoin="round"/>' if curve else ""
-    )
+    # ---- Smooth curve + gradient wash (zero permanent markers) ----
+    if area:
+        parts.append(f'<path d="{area}" fill="url(#areaFill)"/>')
+    if curve:
+        parts.append(
+            f'<path d="{curve}" fill="none" stroke="{accent}" stroke-width="9" '
+            f'stroke-linecap="round" stroke-linejoin="round" opacity="0.16"/>'
+        )
+        parts.append(
+            f'<path d="{curve}" fill="none" stroke="{accent}" stroke-width="3" '
+            f'stroke-linecap="round" stroke-linejoin="round"/>'
+        )
 
-    # Hoverable points: native <title> tooltip + visible number badge on hover.
+    # One permanent annotation for the peak week (a label, not a dot field).
+    if n and best > 0:
+        bi = contributions.index(best)
+        bx, by = points[bi]
+        pill = f"BEST · {best:,}"
+        pill_w = 8.2 * len(pill) + 22.0
+        pill_cx = min(max(bx, left + pill_w / 2 + 2), width - right - pill_w / 2 - 2)
+        above_space = (by - 52.0) >= top
+        pill_y = by - 48.0 if above_space else by + 22.0
+        stem_y2 = pill_y + 18.0 if above_space else pill_y
+        stem_y1 = by - 6.0 if above_space else by + 6.0
+        parts.append(
+            f'<line x1="{bx:.2f}" y1="{stem_y1:.2f}" x2="{bx:.2f}" y2="{stem_y2:.2f}" '
+            f'stroke="{accent}" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/>'
+        )
+        parts.append(
+            f'<rect x="{pill_cx - pill_w / 2:.2f}" y="{pill_y:.2f}" width="{pill_w:.1f}" height="20" rx="10" '
+            f'fill="{tip_bg}" stroke="{accent}" stroke-width="1.2"/>'
+        )
+        parts.append(
+            f'<text x="{pill_cx:.2f}" y="{pill_y + 14:.2f}" font-size="11" font-weight="800" '
+            f'fill="{accent}" text-anchor="middle">{xml_escape(pill)}</text>'
+        )
+
+    # ---- Invisible hover bands: guide + focus ring + tooltip appear on hover only ----
     for i, value in enumerate(contributions):
         cx, cy = points[i]
         ws = week_starts[i]
@@ -310,38 +466,51 @@ def render_svg(
             count_text = "1 contribution"
         else:
             count_text = f"{value:,} contributions"
-        date_text = f"{ws.strftime('%b %d')} – {we.strftime('%b %d, %Y')}"
+        date_text = f"{ws.strftime('%b %d')} - {we.strftime('%b %d, %Y')}"
         full = f"{date_text}: {count_text}"
-        num = f"{value:,}"
-        half = max(21.0, 7.5 * len(num) + 13.0)
-        # Keep the hover badge inside the plot; show it below unusually high points.
-        above = (cy - 44.0) >= (top - 6.0)
-        if above:
-            rect_y = cy - 38.0
-            text_y = cy - 23.0
+        if avg_week > 0 and value > 0:
+            ratio = value / avg_week
+            if abs(ratio - 1.0) < 0.05:
+                ctx = "around avg"
+            elif ratio >= 1.0:
+                ctx = f"{ratio:.1f}x weekly avg"
+            else:
+                ctx = "below avg"
+        elif value == 0:
+            ctx = "quiet week"
         else:
-            rect_y = cy + 16.0
-            text_y = cy + 31.0
+            ctx = "active week"
+        line2_len = len(f"{value:,}  {ctx}")
+        card_w = min(236.0, max(158.0, 7.0 * line2_len + 34.0))
+        card_h = 48.0
+        tx = min(max(cx, left + card_w / 2 + 2), width - right - card_w / 2 - 2)
+        above = (cy - (card_h + 16.0)) >= (top - 4.0)
+        rect_y = cy - card_h - 14.0 if above else cy + 16.0
         half_step = (plot_w / max(1, n - 1) / 2) if n > 1 else plot_w / 2
         hit_w = min(26.0, max(12.0, half_step + 2.0))
         parts.append(
             f'<g class="pt" tabindex="0" aria-label="{xml_escape(full)}">'
             f"<title>{xml_escape(full)}</title>"
             f'<rect x="{cx - hit_w:.2f}" y="{top}" width="{hit_w * 2:.2f}" height="{plot_h}" fill="transparent"/>'
-            f'<circle class="halo" cx="{cx:.2f}" cy="{cy:.2f}" r="9" fill="{line}"/>'
-            f'<circle class="dot" cx="{cx:.2f}" cy="{cy:.2f}" r="3.8" fill="{line}" stroke="{dot_stroke}" stroke-width="2"/>'
-            f'<g class="tip" transform="translate({cx:.2f},{0:.2f})">'
-            f'<rect x="{-half:.1f}" y="{rect_y:.2f}" width="{half * 2:.1f}" height="22" rx="6" '
+            f'<line class="guide" x1="{cx:.2f}" y1="{top}" x2="{cx:.2f}" y2="{baseline:.2f}" '
+            f'stroke="{accent}" stroke-width="1" stroke-dasharray="3 4" opacity="0.65"/>'
+            f'<circle class="focus" cx="{cx:.2f}" cy="{cy:.2f}" r="5.5" fill="{bg}" stroke="{accent}" stroke-width="3"/>'
+            f'<g class="tip" transform="translate({tx:.2f},{0:.2f})">'
+            f'<rect x="{-card_w / 2:.1f}" y="{rect_y:.2f}" width="{card_w:.1f}" height="{card_h}" rx="8" '
             f'fill="{tip_bg}" stroke="{tip_border}" stroke-width="1"/>'
-            f'<text x="0" y="{text_y:.2f}" font-size="12" font-weight="700" fill="{text}" text-anchor="middle">{num}</text>'
+            f'<text x="0" y="{rect_y + 18:.2f}" font-size="11" fill="{muted}" text-anchor="middle">'
+            f"{xml_escape(date_text)}</text>"
+            f'<text x="0" y="{rect_y + 35:.2f}" font-size="13" font-weight="800" fill="{text}" text-anchor="middle">'
+            f"{xml_escape(f'{value:,}')} "
+            f'<tspan font-size="11" font-weight="400" fill="{muted}">· {xml_escape(ctx)}</tspan>'
+            "</text>"
             "</g>"
             "</g>"
         )
 
-    # Small footer so readers know the numbers refresh from live data.
     parts.append(
-        f'<text x="{width - right}" y="{height - 8}" font-size="11" fill="{muted}" text-anchor="end">'
-        "hover any point for its weekly count · refreshed from live GitHub data</text>"
+        f'<text x="{width - right}" y="{height - 12}" font-size="11" fill="{muted}" text-anchor="end">'
+        "hover any week for exact counts · refreshes every 12 hours from live GitHub data</text>"
     )
     parts.append("</svg>")
     return "".join(parts)
@@ -371,10 +540,10 @@ def main() -> int:
     out.mkdir(parents=True, exist_ok=True)
 
     (out / "contribution-frequency.svg").write_text(
-        render_svg(user, contributions, week_starts, dark=False), encoding="utf-8"
+        render_svg(user, contributions, week_starts, daily, dark=False), encoding="utf-8"
     )
     (out / "contribution-frequency-dark.svg").write_text(
-        render_svg(user, contributions, week_starts, dark=True), encoding="utf-8"
+        render_svg(user, contributions, week_starts, daily, dark=True), encoding="utf-8"
     )
 
     print(f"Generated {len(contributions)} weekly points from live GitHub data")
