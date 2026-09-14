@@ -125,11 +125,17 @@ currently poking at: outbox pattern, backpressure, dead-letter queues, cache sta
 
 ## `commit_stream`
 
+<div align="center">
+
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Vedant817&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Vedant817&theme=minimal&hide_border=true&area=true&custom_title=Contribution%20Activity" />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Vedant817&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="Vedant Mahajan GitHub contribution activity graph" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Vedant817/Vedant817/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Vedant817/Vedant817/output/github-contribution-grid-snake.svg" />
+  <img src="https://raw.githubusercontent.com/Vedant817/Vedant817/output/github-contribution-grid-snake.svg" alt="Vedant Mahajan GitHub contribution activity" />
 </picture>
+
+<sub><code>live GitHub contribution stream · regenerated automatically</code></sub>
+
+</div>
 
 ## `handshake`
 
