@@ -15,16 +15,15 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
 
     steps:
       - name: Checkout profile repository
         uses: actions/checkout@v4
 
-      - name: Generate contribution frequency line graph
+      - name: Generate smooth contribution frequency graph
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
         run: python .github/scripts/contribution_frequency.py
 
       - name: Publish generated SVGs to output branch
