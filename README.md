@@ -125,35 +125,11 @@ currently poking at: outbox pattern, backpressure, dead-letter queues, cache sta
 
 ## `commit_stream`
 
-<div align="center">
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=Vedant817&theme=github-dark&hide_border=true" />
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=Vedant817&hide_border=true" />
-  <img src="https://streak-stats.demolab.com?user=Vedant817&hide_border=true" alt="Vedant Mahajan GitHub contribution streak: total contributions, current streak, longest streak" width="495" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Vedant817/Vedant817/output/contribution-frequency-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Vedant817/Vedant817/output/contribution-frequency.svg" />
+  <img src="https://raw.githubusercontent.com/Vedant817/Vedant817/output/contribution-frequency.svg" alt="Vedant Mahajan GitHub contribution frequency: smooth weekly curve with dots on every spike, totals and streaks" width="100%" />
 </picture>
-
-</div>
-
-<details>
-<summary><code>$ ./productivity --stats --productive-hours</code></summary>
-<br/>
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Vedant817&theme=github_dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Vedant817&theme=github" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Vedant817&theme=github_dark" alt="Vedant Mahajan GitHub stats: stars, commits, pull requests, issues" width="340" />
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Vedant817&theme=github_dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Vedant817&theme=github" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Vedant817&theme=github_dark" alt="Vedant Mahajan most productive hours of the day" width="340" />
-</picture>
-
-</div>
-</details>
 
 ## `handshake`
 
