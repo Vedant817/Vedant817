@@ -21,7 +21,7 @@ jobs:
       - name: Checkout profile repository
         uses: actions/checkout@v4
 
-      - name: Generate smooth contribution frequency graph
+      - name: Generate weekly contribution activity line
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python .github/scripts/contribution_frequency.py
