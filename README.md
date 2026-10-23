@@ -126,9 +126,9 @@ currently poking at: outbox pattern, backpressure, dead-letter queues, cache sta
 ## `commit_stream`
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Vedant817/Vedant817/output/contribution-frequency-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Vedant817/Vedant817/output/contribution-frequency.svg" />
-  <img src="https://raw.githubusercontent.com/Vedant817/Vedant817/output/contribution-frequency.svg" alt="Vedant Mahajan GitHub contribution frequency: smooth weekly curve with dots on every spike, totals and streaks" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Vedant817&show_icons=true&include_all_commits=true&hide_border=true&theme=github_dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=Vedant817&show_icons=true&include_all_commits=true&hide_border=true&theme=default" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Vedant817&show_icons=true&include_all_commits=true&hide_border=true&theme=github_dark" alt="Vedant Mahajan GitHub stats: stars, commits, pull requests, issues, and contributed repositories" width="100%" />
 </picture>
 
 ## `handshake`
